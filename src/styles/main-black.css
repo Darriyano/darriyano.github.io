@@ -12,10 +12,60 @@
     gap: 4vw;
     left: 4vw;
     margin-top: 3vw;
+    height: 100vh;
 }
 
 .main-menu img {
-    height: 17px;
+    height: 2.5vh;
+}
+
+.name-surname-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    left: 38vw;
+    top: 23.5vh;
+    width: 55vw;
+}
+
+.name-surname-wrapper img {
+    height: 11vh;
+}
+
+.name {
+    align-self: flex-start; /* Aligns the name to the left */
+    margin-left: 0;         /* Optional: in case you want fine control over its position */
+}
+
+.surname {
+    align-self: flex-end; /* Aligns the surname to the right */
+    margin-right: 0;      /* Optional: adjust if needed */
+}
+
+
+.occupation-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    left: 38vw;
+    top: 57.5vh;
+    width: 55vw;
+}
+
+.occupation-wrapper img {
+    height: 8vh;
+}
+
+.designer {
+    align-self: flex-end; /* Aligns the name to the left */
+    margin-right: 0;         /* Optional: in case you want fine control over its position */
+}
+
+.programmer {
+    align-self: flex-start; /* Aligns the surname to the right */
+    margin-left: 0;      /* Optional: adjust if needed */
 }
 
 .photo-real {
@@ -23,4 +73,51 @@
     height: 80vh;
     bottom: 0;
     left: 2vw;
+}
+
+.contact-me-btn {
+    background: linear-gradient(90deg, #D95870 0%, #C6435B 100%);
+    border-radius: 30px;
+    position: absolute;
+    left: 38vw;
+    top: 85vh;
+}
+
+.contact-me-btn:hover {
+    animation: pulse 2s infinite;
+}
+
+.contact-me-btn img {
+    padding: 1.5vh 5.5vw 1.5vh 5.5vw;
+}
+
+.bg-pattern-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 60vh;
+}
+
+.bg-pattern-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 33vh;
+}
+
+.bg-pattern-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 35vh;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: scale(1.13);
+    }
 }
