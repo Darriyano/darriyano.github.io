@@ -1,0 +1,26 @@
+#main-black {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.main-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+
+    gap: 4vw;
+    left: 4vw;
+    margin-top: 3vw;
+}
+
+.main-menu img {
+    height: 17px;
+}
+
+.photo-real {
+    position: absolute;
+    height: 80vh;
+    bottom: 0;
+    left: 2vw;
+}
