@@ -112,6 +112,14 @@
     height: 35vh;
 }
 
+.bg-pattern-corner-text {
+    position: absolute;
+    top: 4vh;
+    right: 2.2vw;
+    height: 22vh;
+}
+
+
 @keyframes pulse {
     0%,
     100% {

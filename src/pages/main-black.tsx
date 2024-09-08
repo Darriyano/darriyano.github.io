@@ -11,6 +11,8 @@ import CtMe from '../vectors/CONTACT ME.svg'
 import Pattern1 from '../vectors/main-black-bg.svg'
 import Pattern2 from '../vectors/main-black-bg-right.svg'
 import Pattern3 from '../vectors/main-black-bg-corner.svg'
+import TextCorner from '../vectors/switch-text.svg'
+
 
 
 
@@ -23,9 +25,11 @@ const MainBlack = () => {
                 <a href='#contact-black'><img src={MenuCont} alt='easter egg)'/></a>
             </div>
 
-            <img src={Pattern1} className='bg-pattern-left'></img>
-            <img src={Pattern2} className='bg-pattern-right'></img>
-            <img src={Pattern3} className='bg-pattern-corner'></img>
+            <img src={Pattern1} className='bg-pattern-left'/>
+            <img src={Pattern2} className='bg-pattern-right'/>
+            <img src={Pattern3} className='bg-pattern-corner'/>
+
+            <img src={TextCorner} className='bg-pattern-corner-text'/>
 
 
             <img src={RealPhoto} className='photo-real' alt=''/>
