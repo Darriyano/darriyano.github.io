@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import MainBlack from "./pages/main-black";
+import AboutMeBlackPage from "./pages/about-me-black";
 
 
 function App() {
@@ -22,7 +23,9 @@ function App() {
     return (
         <> <ToggleSwitcher/>
             {!toggleSwitch ? (
-                    <MainBlack/>
+                    <>
+                        <MainBlack/>
+                        <AboutMeBlackPage/></>
                 ) :
                 <></>}
         </>

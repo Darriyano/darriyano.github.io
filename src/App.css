@@ -7,8 +7,8 @@ body {
     z-index: 1000;
     position: absolute;
     display: inline-block;
-    width: 3vw;
-    height: 2.5vh;
+    width: 5vw;
+    height: 3.5vh;
     right: 10vw;
     top: 11vh;
     transform: rotate(35deg);
@@ -30,37 +30,33 @@ body {
     right: 0;
     bottom: 0;
     background-color: transparent;
-    -webkit-transition: .4s;
     transition: .4s;
-    outline: 2px solid #D4D4D4;
+    outline: 3px solid #D4D4D4;
+    border-radius: 50px;
 }
 
+/* Circle inside the slider */
 .slider:before {
     position: absolute;
     content: "";
-    height: 1.7vh;
-    width: 1.7vh;
-    left: 4px;
-    bottom: 4px;
+    height: 75%; /* Set based on parent height to make it adaptive */
+    width: 28%;
+    /*width: 75%; !* Keep it proportional *!*/
+    left: 5%; /* Small padding to the left */
+    bottom: 12.5%; /* Center it vertically */
     background-color: #D2546B;
-    -webkit-transition: .4s;
     transition: .4s;
+    border-radius: 50%; /* Make the circle rounded */
 }
 
+/* When the input is checked */
 input:checked + .slider {
     background-color: #D4D4D4;
 }
 
-input:focus + .slider {
-    box-shadow: 0 0 1px #D4D4D4;
-}
-
 input:checked + .slider:before {
-    -webkit-transform: translateX(3vw);
-    -ms-transform: translateX(3vw);
-    transform: translateX(1.5vw);
-    background-color: #D2546B; /* Circle is pink when on */
-
+    transform: translateX(200%); /* Moves to the right edge */
+    background-color: #D2546B;
 }
 
 /* Rounded sliders */

@@ -14,8 +14,6 @@ import Pattern3 from '../vectors/main-black-bg-corner.svg'
 import TextCorner from '../vectors/switch-text.svg'
 
 
-
-
 const MainBlack = () => {
     return (
         <div id='main-black'>
