@@ -1,37 +1,28 @@
-.about-black {
+#about-black {
     width: 100vw;
     height: 100vh;
     position: relative;
-    display: flex; /* Use Flexbox */
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-
-    opacity: 0; /* Initially invisible */
-    transform: translateY(50px); /* Initial offset for animation */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* When the secondBlock becomes visible (when scrolled into view) */
-.about-black.visible {
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Move into place */
-}
 
-.pattern-secondary-corner {
+#about-black .pattern-secondary-corner {
     position: absolute;
     right: 0;
     bottom: 0;
     height: 35vh;
 }
 
-.pattern-secondary-right {
+#about-black .pattern-secondary-right {
     position: absolute;
     left: 0;
     top: 0;
     height: 35vh;
 }
 
-.container-about {
+#about-black .container-about {
     z-index: 1000;
     position: absolute;
     display: flex;
@@ -43,7 +34,7 @@
 }
 
 
-.aligner-left {
+#about-black .aligner-left {
     display: flex;
     flex-direction: column;
     align-self: flex-start; /* Aligns the surname to the right */
@@ -51,14 +42,14 @@
     gap: 3vh;
 }
 
-.aligner-right {
+#about-black .aligner-right {
     display: flex;
     flex-direction: column;
     align-self: flex-end; /* Aligns the name to the left */
     margin-right: 0;         /* Optional: in case you want fine control over its position */
 }
 
-.explore-btn {
+#about-black .explore-btn {
     background: linear-gradient(90deg, #D95870 0%, #C6435B 100%);
     border-radius: 30px;
     position: absolute;
@@ -76,11 +67,9 @@
     left: 0;
 }
 
-/* Second block that will appear during scrolling */
-
-
-/* When the secondBlock becomes visible (when scrolled into view) */
-.secondBlock.visible {
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Move into place */
+.my-keey-dates {
+    position: absolute;
+    width: 50%;
+    background-color: aqua;
+    height: 50%;
 }

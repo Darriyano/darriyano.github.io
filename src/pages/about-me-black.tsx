@@ -1,67 +1,100 @@
-import '../styles/about-me-styles.css'
-import PatternCorner from '../vectors/secondary-corner.svg'
-import RightCorner from '../vectors/secondary-right.svg'
-import First from '../vectors/firstquality.svg'
-import Second from '../vectors/secondquality.svg'
-import Third from '../vectors/thirdquality.svg'
-import GH from '../vectors/GH.svg'
-import FM from '../vectors/FM.svg'
+import '../styles/about-me-styles.css';
+import {motion, useAnimation} from 'framer-motion';
+import {useInView} from 'react-intersection-observer';
+import React, {useEffect} from 'react';
 
+import PatternCorner from '../vectors/secondary-corner.svg';
+import RightCorner from '../vectors/secondary-right.svg';
+import First from '../vectors/firstquality.svg';
+import Second from '../vectors/secondquality.svg';
+import Third from '../vectors/thirdquality.svg';
+import GH from '../vectors/GH.svg';
+import FM from '../vectors/FM.svg';
 
+const fadeLeft = {
+    hidden: {opacity: 0, x: -80},
+    visible: (i: number) => ({
+        opacity: 1,
+        x: 0,
+        transition: {
+            delay: i * 0.2,
+            type: 'spring',
+            stiffness: 400,
+            damping: 30,
+        },
+    }),
+};
 
-import {useEffect, useRef} from "react";
+const fadeRight = {
+    hidden: {opacity: 0, x: 80},
+    visible: (i: number) => ({
+        opacity: 1,
+        x: 0,
+        transition: {
+            delay: i * 0.2,
+            type: 'spring',
+            stiffness: 400,
+            damping: 30,
+        },
+    }),
+};
 
-
-const AboutMeBlackPage = () => {
-    const secondBlockRef = useRef(null);
+const AboutMeBlackPage: React.FC = () => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView({triggerOnce: true, threshold: 0.6});
 
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible'); // Add the 'visible' class when in view
-                } else {
-                    entry.target.classList.remove('visible'); // Remove the class when out of view
-                }
-            });
-        });
-
-        if (secondBlockRef.current) {
-            observer.observe(secondBlockRef.current); // Start observing the secondBlock
+        if (inView) {
+            controls.start('visible');
         }
-
-        return () => {
-            if (secondBlockRef.current) {
-                observer.unobserve(secondBlockRef.current); // Cleanup the observer when the component unmounts
-            }
-        };
-    }, []);
+    }, [inView, controls]);
 
     return (
-        <div className='about-black' ref={secondBlockRef}>
+        <div id='about-black' ref={ref}>
             <img src={PatternCorner} className='pattern-secondary-corner'/>
             <img src={RightCorner} className='pattern-secondary-right'/>
+
             <div className='container-about'>
-                <img src={First} className='aligner-left'/>
-                <div className='aligner-right'>
+                <motion.div
+                    className='aligner-left'
+                    variants={fadeLeft}
+                    initial="hidden"
+                    animate={controls}
+                    custom={0}
+                >
+                    <img src={First}/>
+                </motion.div>
+
+                <motion.div
+                    className='aligner-right'
+                    variants={fadeRight}
+                    initial="hidden"
+                    animate={controls}
+                    custom={1}
+                >
                     <div><img src={Second}/></div>
                     <div>
                         <button className='explore-btn align-to-right'><img src={GH}/></button>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className='aligner-left'>
+                <motion.div
+                    className='aligner-left'
+                    variants={fadeLeft}
+                    initial="hidden"
+                    animate={controls}
+                    custom={2}
+                >
                     <div><img src={Third}/></div>
                     <div>
                         <button className='explore-btn align-to-left'><img src={FM}/></button>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
-            <div ref={secondBlockRef} className='secondBlock'></div>
-
+            <div id='my-key-dates'></div>
         </div>
-    )
-}
+    );
+};
 
 export default AboutMeBlackPage;

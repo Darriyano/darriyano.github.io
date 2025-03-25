@@ -4,7 +4,7 @@
     position: relative;
 }
 
-.main-menu {
+#main-black  .main-menu {
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -15,11 +15,11 @@
     height: 100vh;
 }
 
-.main-menu img {
+#main-black  .main-menu img {
     height: 2.5vh;
 }
 
-.name-surname-wrapper {
+#main-black .name-surname-wrapper {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -29,22 +29,22 @@
     width: 55vw;
 }
 
-.name-surname-wrapper img {
+#main-black .name-surname-wrapper img {
     height: 11vh;
 }
 
-.name {
+#main-black  .name {
     align-self: flex-start; /* Aligns the name to the left */
     margin-left: 0;         /* Optional: in case you want fine control over its position */
 }
 
-.surname {
+#main-black .surname {
     align-self: flex-end; /* Aligns the surname to the right */
     margin-right: 0;      /* Optional: adjust if needed */
 }
 
 
-.occupation-wrapper {
+#main-black  .occupation-wrapper {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -54,28 +54,28 @@
     width: 55vw;
 }
 
-.occupation-wrapper img {
+#main-black .occupation-wrapper img {
     height: 8vh;
 }
 
-.designer {
+#main-black  .designer {
     align-self: flex-end; /* Aligns the name to the left */
     margin-right: 0;         /* Optional: in case you want fine control over its position */
 }
 
-.programmer {
+#main-black .programmer {
     align-self: flex-start; /* Aligns the surname to the right */
     margin-left: 0;      /* Optional: adjust if needed */
 }
 
-.photo-real {
+#main-black .photo-real {
     position: absolute;
     height: 80vh;
     bottom: 0;
     left: 2vw;
 }
 
-.contact-me-btn {
+#main-black .contact-me-btn {
     background: linear-gradient(90deg, #D95870 0%, #C6435B 100%);
     border-radius: 30px;
     position: absolute;
@@ -83,36 +83,36 @@
     top: 85vh;
 }
 
-.contact-me-btn:hover {
+#main-black .contact-me-btn:hover {
     animation: pulse 2s infinite;
 }
 
-.contact-me-btn img {
+#main-black .contact-me-btn img {
     padding: 1.5vh 5.5vw 1.5vh 5.5vw;
 }
 
-.bg-pattern-left {
+#main-black .bg-pattern-left {
     position: absolute;
     bottom: 0;
     left: 0;
     height: 60vh;
 }
 
-.bg-pattern-right {
+#main-black .bg-pattern-right {
     position: absolute;
     bottom: 0;
     right: 0;
     height: 33vh;
 }
 
-.bg-pattern-corner {
+#main-black .bg-pattern-corner {
     position: absolute;
     top: 0;
     right: 0;
     height: 35vh;
 }
 
-.bg-pattern-corner-text {
+#main-black .bg-pattern-corner-text {
     position: absolute;
     top: 4vh;
     right: 2.2vw;
@@ -131,4 +131,7 @@
 }
 
 @media screen and (max-width:1000px) {
+    .photo-real {
+        display: none;
+    }
 }

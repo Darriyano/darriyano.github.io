@@ -1,0 +1,59 @@
+#contact-black {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#contact-black .text-contact {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 1040px;
+}
+
+#contact-black .pattern-secondary-corner {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 35vh;
+}
+
+#contact-black .pattern-secondary-right {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 35vh;
+}
+
+#contact-black .circle {
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pos1 {
+    background: linear-gradient(90deg, #2F3E41 0%, #1B1F1C 100%);
+    width: 350px;
+    height: 350px;
+    left: 35vw;
+    top: 10vh;
+}
+
+.pos2 {
+    background: linear-gradient(90deg, #2F3E41 0%, #1B1F1C 100%);
+    width: 300px;
+    height: 300px;
+    right: 15vw;
+    top: 35vh;
+}
+
+.pos3 {
+    background: linear-gradient(90deg, #2F3E41 0%, #1B1F1C 100%);
+    width: 200px;
+    height: 200px;
+    left: 15vw;
+    top: 40vh;
+}
+
