@@ -25,8 +25,8 @@
     "gh-pages": "^5.0.0"
   },
   "scripts": {
+    "build": "react-scripts build && rm -rf docs && mv build docs",
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
