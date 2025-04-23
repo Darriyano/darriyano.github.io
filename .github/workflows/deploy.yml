@@ -1,5 +1,9 @@
 name: Deploy React App to GitHub Pages
 
+# Добавляем права на запись в содержимое репозитория
+permissions:
+  contents: write
+
 on:
   push:
     branches:
